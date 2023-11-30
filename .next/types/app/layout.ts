@@ -1,4 +1,4 @@
-// File: /Users/rosedevelopement/Desktop/travel_app/app/layout.tsx
+// File: /Users/rosedevelopement/Desktop/GITHUB/hilink/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
