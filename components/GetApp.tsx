@@ -1,8 +1,18 @@
+"use client"
+
 import React from 'react'
 import Button from './Button'
 import Image from 'next/image'
 
 const GetApp = () => {
+  const handleAppStoreClick = () => {
+    window.open('https://apps.apple.com', '_blank');
+  };
+
+  const handlePlayStoreClick = () => {
+    window.open('https://play.google.com', '_blank');
+  };
+
   return (
     <section id="get_app" className="flexCenter w-full flex-col pb-[100px]">
       <div className="get-app">
@@ -16,7 +26,7 @@ const GetApp = () => {
               icon="/apple.svg"
               variant="btn_white"
               full
-              onClick={() => window.open('https://apps.apple.com', '_blank')}
+              onClick={handleAppStoreClick}
             />
             <Button 
               type="button"
@@ -24,7 +34,7 @@ const GetApp = () => {
               icon="/android.svg"
               variant="btn_dark_green_outline"
               full
-              onClick={() => window.open('https://play.google.com', '_blank')}
+              onClick={handlePlayStoreClick}
             />
           </div>
         </div>
@@ -38,3 +48,4 @@ const GetApp = () => {
 }
 
 export default GetApp
+
