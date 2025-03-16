@@ -4,10 +4,17 @@ import Image from 'next/image'
 import Button from './Button'
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleDownloadApp = () => {
+    const getAppSection = document.getElementById('get_app');
+    if (getAppSection) {
+      getAppSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleHowItWorks = () => {
+    const howItWorksSection = document.getElementById('how_it_works');
+    if (howItWorksSection) {
+      howItWorksSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -52,14 +59,14 @@ const Hero = () => {
             type="button" 
             title="Download App" 
             variant="btn_green" 
-            onClick={() => scrollToSection('get_app')}
+            onClick={handleDownloadApp}
           />
           <Button 
             type="button" 
             title="How we work?" 
             icon="/play.svg"
             variant="btn_white_text" 
-            onClick={() => scrollToSection('how_it_works')}
+            onClick={handleHowItWorks}
           />
         </div>
       </div>
@@ -92,4 +99,3 @@ const Hero = () => {
 }
 
 export default Hero
-
