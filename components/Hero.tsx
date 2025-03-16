@@ -2,8 +2,15 @@ import Image from 'next/image'
 import Button from './Button'
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
+    <section id="home" className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
       <div className="hero-map" />
 
       <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
@@ -43,12 +50,14 @@ const Hero = () => {
             type="button" 
             title="Download App" 
             variant="btn_green" 
+            onClick={() => scrollToSection('get_app')}
           />
           <Button 
             type="button" 
             title="How we work?" 
             icon="/play.svg"
             variant="btn_white_text" 
+            onClick={() => scrollToSection('how_it_works')}
           />
         </div>
       </div>
